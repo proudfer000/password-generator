@@ -5,59 +5,61 @@ var specialChr = "~!@#$%&=+<>?";
 var allChrSum ="";
 var allChrSumFinalString ="";
 
-var passField = document.getElementById("generatedPassword");
+var startBtn = document.querySelector("#stBtn");
+var passLength = document.querySelector("#passLength");
 var checkboxLowerCase = document.querySelector("#lowerCase");
 var checkboxUpperCase = document.querySelector("#upperCase");
 var checkboxNumeric = document.querySelector("#numeric");
 var checkboxSpecialChr = document.querySelector("#specialCharacters");
-var passLength = document.querySelector("#passLength");
-var copy = document.querySelector("#copyBtn");
 var generatePass = document.querySelector("#generateBtn");
+var passField = document.getElementById("generatedPassword");
+var copy = document.querySelector("#copyBtn");
 
 
 
-function test(event) {
-  
-  if(document.getElementById("lowerCase").checked==true 
-  || document.getElementById("upperCase").checked==true
-  || document.getElementById("numeric").checked==true
-  || document.getElementById("specialCharacters").checked==true){
+
+function randomPassGnr() {
+  if (passLength.value!==""){
+      if(checkboxLowerCase.checked 
+      || checkboxUpperCase.checked
+      || checkboxNumeric.checked
+      || checkboxSpecialChr.checked){
     
-      if(document.getElementById("lowerCase").checked==true){
-        allChrSum = allChrSum + lowerCaseChr;
-   }
-      if(document.getElementById("upperCase").checked==true){
-        allChrSum = allChrSum + upperCaseChr;
+          if(checkboxLowerCase.checked){
+            allChrSum = allChrSum + lowerCaseChr;
       }
-      if(document.getElementById("numeric").checked==true){
-        allChrSum = allChrSum + numericChr;
+          if(checkboxUpperCase.checked){
+            allChrSum = allChrSum + upperCaseChr;
       }
-      if(document.getElementById("specialCharacters").checked==true){
-        allChrSum = allChrSum + specialChr;
-      }
-      allChrSum = allChrSum.split("");
 
-      for(var i =0; i < passLength.value; i++){
-        //console.log(i);
-        allChrSumFinalString += allChrSum[Math.floor(Math.random()*allChrSum.length)]
-        console.log(allChrSumFinalString);
-        console.log(allChrSum);
-         if (i+1 == passLength.value){
-          passField.value = allChrSumFinalString;
-          console.log(i);
-          clearValue();
+          if(checkboxNumeric.checked){
+            allChrSum = allChrSum + numericChr;
+      }
+
+          if(checkboxSpecialChr.checked){
+            allChrSum = allChrSum + specialChr;
+      }
+
+          allChrSum = allChrSum.split("");
+
+          for(var i =0; i < passLength.value; i++){
+            allChrSumFinalString += allChrSum[Math.floor(Math.random()*allChrSum.length)]
+        
+            if (i+1 == passLength.value){
+              passField.value = allChrSumFinalString;
+              console.log(i);
+              clearValue();
         }
-      }
-
-     
-      
+      }   
   }
-
+      else {
+      alert ("Please check at least one option")
+  }
+  
+}
   else {
-    alert ("Please check at least one option")
-  }
-  
-  
+  alert ("Please write a number between 8-128 ")
+}
 }
 
 function clearValue() {
@@ -95,6 +97,6 @@ function copyText(event) {
   checkboxNumeric.addEventListener("click", clearValue);
   checkboxSpecialChr.addEventListener("click", clearValue);
   copy.addEventListener("click", copyText);
-  generatePass.addEventListener("click", test);
+  generatePass.addEventListener("click", randomPassGnr);
   
   
