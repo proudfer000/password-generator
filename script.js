@@ -3,8 +3,9 @@ var upperCaseChr = "QWERTYUIOPASDFGHJKLZXCVBNM";
 var numericChr = "0123456789";
 var specialChr = "~!@#$%&=+<>?";
 var allChrSum ="";
+var allChrSumFinalString ="";
 
-
+var passField = document.getElementById("generatedPassword");
 var checkboxLowerCase = document.querySelector("#lowerCase");
 var checkboxUpperCase = document.querySelector("#upperCase");
 var checkboxNumeric = document.querySelector("#numeric");
@@ -21,7 +22,7 @@ function test(event) {
   || document.getElementById("upperCase").checked==true
   || document.getElementById("numeric").checked==true
   || document.getElementById("specialCharacters").checked==true){
-    var allChrSumArray ="";
+    
       if(document.getElementById("lowerCase").checked==true){
         allChrSum = allChrSum + lowerCaseChr;
    }
@@ -35,6 +36,21 @@ function test(event) {
         allChrSum = allChrSum + specialChr;
       }
       allChrSum = allChrSum.split("");
+
+      for(var i =0; i < passLength.value; i++){
+        //console.log(i);
+        allChrSumFinalString += allChrSum[Math.floor(Math.random()*allChrSum.length)]
+        console.log(allChrSumFinalString);
+        console.log(allChrSum);
+         if (i+1 == passLength.value){
+          passField.value = allChrSumFinalString;
+          console.log(i);
+          clearValue();
+        }
+      }
+
+     
+      
   }
 
   else {
@@ -45,7 +61,8 @@ function test(event) {
 }
 
 function clearValue() {
-  allChrSum = "";
+  allChrSum ="";
+  allChrSumFinalString="";
   
 }
 
