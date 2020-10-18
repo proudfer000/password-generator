@@ -4,35 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap"
+    rel="stylesheet"
+  /><link>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <main>
+    
+    <header>
         <h1>Random Password Generator</h1>
 
         <button id="stBtn" tabindex="0">Click here to start!</button>
+
+    </header>
+
+    <main class="container">
         
-        <form display="block">
-            <div display="block"> 
+        <form>
+           
             <label> Length of Password <input id="passLength" type="number" min="8" max="128" value="8">
-                <br>Choose from 8 to 128</label><br>
+
+                <br>Choose from 8 to 128<br>
+
+            </label>
             
-            <input id="lowerCase" type="checkbox" tabindex="0">
-                 <label> Include lowercase
-                        <br>Eg: abcdef</label><br>
+            <input id="lowerCase" class="checkbox" type="checkbox" tabindex="0">
+                <label> Include lowercase
+                        <br>Eg: abcdef<br>
 
-            <input id="upperCase" type="checkbox" tabindex="0">
-                <label> Include UPPERcase
-                        <br>Example: ABCDE</label><br>
+                </label>
 
-            <input id="numeric" type="checkbox" tabindex="0">
-                <label> Include numeric
-                        <br>Example: 0123456789</label><br>
+
+            <input id="upperCase" class="checkbox" type="checkbox" tabindex="0">
+                <label for="upperCase"> Include UPPERcase
+                        <br>Example: ABCDE
                         
-            <input id="specialCharacters" type="checkbox" tabindex="0">
-                <label> Include special characters
-                        <br>Example: ~!@#$%^&*()_+</label><br>
+                </label><br>
+
+            <input id="numeric" class="checkbox" type="checkbox" tabindex="0">
+                <span class="slider"></span>
+                <label for="numeric">Numeric
+                        <br>Example: 0123456789<br>
+                        
+                </label>
+                        
+            <input id="specialCharacters" class="checkbox" type="checkbox" tabindex="0">
+                <span class="slider"></span>
+                <label for="specialCharacters"> Include special characters
+                        <br>Example: ~!@#$%^&*()_+<br>
+                        
+                </label>
             
             <input id="generateBtn" type="button" value="Generate Password" tabindex="0">
 
@@ -40,9 +63,6 @@
             
             <button id="copyBtn" tabindex="0">Copy text</button>
             
-        </div>
-            
-
   
 </form>
         
