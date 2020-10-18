@@ -81,7 +81,7 @@ the users hit the generate password again the new value isn't added on top of th
   alert ("Please write a number between 8-128 ")
 }
 }
-/*This function will clear the values of those var each time the user clicks any checkbox of at the end of the generate pass function, 
+/*This function will clear the values of those var each time the user clicks any checkbox and at the end of the generate pass function, 
 the purpose is so the value of the checkboxes inst added more than once*/
 function clearValue() {
   allChrSum ="";
