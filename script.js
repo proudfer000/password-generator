@@ -91,6 +91,8 @@ function clearValue() {
 
 /*Function to copy the generated password*/
 function copyText(event) {
+
+/*Function to prevent default behavior, in this case the behavior of btn inside a form, so the form doesn't get refresh when user hits any btn*/
     event.preventDefault();
     var copyText = document.getElementById("generatedPassword");
     copyText.select();
