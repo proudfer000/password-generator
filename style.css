@@ -1,9 +1,11 @@
+/*Global styles*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/*Global background, std font and std font size*/
 body {
   font-size: 14px;
   background-color: #BCDBD7;
@@ -12,41 +14,56 @@ body {
 
 }
 
-header {
-  text-align: center;
-  color:#3C3506;
-  font-family: "Amatic SC", cursive;
+/*Style for header and start btn*/
+    header {
+        text-align: center;
+        color:#3C3506;
+        font-family: "Amatic SC", cursive;
+        margin-top: 10px;
+        font-size: 3.5em;
 }
+/*Style start btn*/
+        #stBtn {
+            text-align: center;
+            color:#3C3506;
+            font-family: "Amatic SC", cursive;
+            background-color: tomato;
+            margin-top: 10px;
+            font-size: 1em;
+    }
 
-h1 {
-    margin-top: 10px;
-  font-size: 3.5em;
-}
-
-input[type="text"], input[type="number"]  {
-  border: 5px solid tomato;
-  font-size: 2em;
-  color: tomato;
-  width: 100%;
-  margin-top: 10px;
-}
-
-
-
-.container {
-    padding: 20px;
-    max-width: 400px;
-    margin: 0 auto;
-    color: #3C3506;
-    user-select: none;
-    display: none;
+    
+/*Global style for the form elements*/
+    .container {
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        color: #3C3506;
+        user-select: none;
+        display: none;
   }
 
-
-.checkbox, label {
-    margin-top: 10px;
-    font-size: 1.5em;
+    
+    
+/*Style for number and text input fields*/
+        input[type="text"], input[type="number"]  {
+            border: 5px solid tomato;
+            font-size: 2em;
+            color: tomato;
+            width: 100%;
+            margin-top: 10px;
 }
+
+/*Style for checkbox and correspondent labels */
+            .checkbox, label {
+                margin-top: 10px;
+                font-size: 1.5em;
+}
+
+
+
+
+
 
 
 
