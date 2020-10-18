@@ -8,6 +8,8 @@ body {
   font-size: 14px;
   background-color: #BCDBD7;
   font-family: "Josefin Sans", sans-serif;
+  
+
 }
 
 header {
@@ -37,6 +39,7 @@ input[type="text"], input[type="number"]  {
     margin: 0 auto;
     color: #3C3506;
     user-select: none;
+    display: none;
   }
 
 

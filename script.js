@@ -47,7 +47,6 @@ function randomPassGnr() {
         
             if (i+1 == passLength.value){
               passField.value = allChrSumFinalString;
-              console.log(i);
               clearValue();
         }
       }   
@@ -69,20 +68,6 @@ function clearValue() {
 }
 
 
-
-
-console.log(checkboxLowerCase.checked);
-console.log(checkboxUpperCase.checked);
-console.log(checkboxNumeric.checked);
-console.log(checkboxSpecialChr.checked);
-//console.log(test);
-
-
-
-
-
-
-
 /*Function to copy the generated password*/
 function copyText(event) {
     event.preventDefault();
@@ -92,11 +77,19 @@ function copyText(event) {
     document.execCommand("copy");
   }
 
+
+function showPassG(){
+  document.querySelector(".container").style.display= "block";
+  document.querySelector("#stBtn").style.display= "none";
+  
+
+}
+
   checkboxLowerCase.addEventListener("click", clearValue);
   checkboxUpperCase.addEventListener("click", clearValue);
   checkboxNumeric.addEventListener("click", clearValue);
   checkboxSpecialChr.addEventListener("click", clearValue);
   copy.addEventListener("click", copyText);
   generatePass.addEventListener("click", randomPassGnr);
-  
+  startBtn.addEventListener("click", showPassG)
   
