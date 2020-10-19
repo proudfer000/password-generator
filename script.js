@@ -104,6 +104,7 @@ function copyText(event) {
 function showPassG(){
   document.querySelector(".container").style.display= "block";
   document.querySelector(".container").className += " fade-in";
+  
   document.querySelector("#stBtn").className= "fade-out";
   document.querySelector("#stBtn").style.display= "none";
 
