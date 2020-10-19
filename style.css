@@ -10,8 +10,6 @@ body {
   font-size: 14px;
   background-color: #BCDBD7;
   font-family: "Josefin Sans", sans-serif;
-  
-
 }
 
 /*Style for header and start btn*/
@@ -34,9 +32,8 @@ body {
             border: 2px solid #C6C908;
     }
 
-    
 /*Global style for the form elements*/
-    .container {
+    main {
         padding: 20px;
         max-width: 400px;
         margin: 0 auto;
@@ -45,8 +42,6 @@ body {
         display: none;
   }
 
-    
-    
 /*Style for number and text input fields*/
         input[type="text"], input[type="number"]  {
             border: 5px solid tomato;
@@ -55,9 +50,9 @@ body {
             width: 100%;
             margin-top: 10px;
             border-radius: 25px;
-            margin-bottom: 10px;
-            
+            margin-bottom: 10px;      
 }
+
 /*Size input fields*/
             #passLength{
               font-size: 1em;
@@ -69,6 +64,7 @@ body {
                 transform: scale(2);
                 margin: 10px;               
         }
+
 /*Style for generate and copy btn*/             
         #generateBtn, #copyBtn {
             text-align: center;
@@ -84,17 +80,95 @@ body {
   
         }
 
+/*Hover animation for btns*/  
 #generateBtn:hover, #copyBtn:hover, #stBtn:hover {
   border: 2px solid black;
   cursor: pointer;
   box-shadow: 5px 10px 18px #888888;
-
-
 }
 
+/*Transition animation for application*/
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+  }
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
 
-
-
-
-
+/*Transition animation for start button*/
+  .fade-out {
+    animation: fadeOut ease 1s;
+    -webkit-animation: fadeOut ease 1s;
+    -moz-animation: fadeOut ease 1s;
+    -o-animation: fadeOut ease 1s;
+    -ms-animation: fadeOut ease 1s;
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-moz-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-o-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-ms-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+  }
 
