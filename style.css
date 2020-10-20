@@ -66,6 +66,8 @@ body {
 /*Size input fields*/
             #passLength{
               font-size: 1em;
+              padding-left: 10px;
+           
             }
 
 /*Style for checkbox and correspondent labels */
